@@ -27,6 +27,7 @@
 #include "CLI/CLI.hpp"
 
 #include "commands/examine/assign.hpp"
+#include "commands/examine/diversity.hpp"
 #include "commands/examine/edpl.hpp"
 #include "commands/examine/graft.hpp"
 #include "commands/examine/heat_tree.hpp"
@@ -56,6 +57,7 @@ inline void setup_examine( CLI::App& app )
 
     // Add module subcommands.
     setup_assign( *sub );
+    setup_diversity( *sub );
     setup_edpl( *sub );
     setup_graft( *sub );
     setup_heat_tree( *sub );
