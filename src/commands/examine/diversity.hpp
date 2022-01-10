@@ -41,13 +41,13 @@ class DiversityOptions
 {
 public:
 
-    JplaceInputOptions  jplace_input;
+    JplaceInputOptions jplace_input;
 
-    CliOption<bool> calculate_PD;
-    CliOption<bool> calculate_BWPD;
-    CliOption<bool> calculate_MPD;
+    bool calculate_PD;
+    bool calculate_BWPD;
+    bool calculate_MPD;
 
-    FileOutputOptions   file_output;
+    FileOutputOptions file_output;
 
 };
 

@@ -44,28 +44,25 @@ void setup_diversity( CLI::App& app )
 
     // ==== which metrics should we calculate? ====
     // PD
-    options->calculate_PD = sub->add_flag(
+    opt->calculate_PD = sub->add_flag(
         "--PD",
-        options->calculate_PD.value(),
+        opt->calculate_PD,
         "Calculate Faith's Phylogenetic Diversity (PD) metric."
-    );
-    options->calculate_PD.option()->group( "Metrics" );
+    )->group( "Metrics" );
 
     // BWPD
-    options->calculate_BWPD = sub->add_flag(
+    opt->calculate_BWPD = sub->add_flag(
         "--BWPD",
-        options->calculate_BWPD.value(),
+        opt->calculate_BWPD,
         "Calculate the Balance Weighted Phylogenetic Diversity (BWPD) metric."
-    );
-    options->calculate_BWPD.option()->group( "Metrics" );
+    )->group( "Metrics" );
 
     // MPD
-    options->calculate_MPD = sub->add_flag(
+    opt->calculate_MPD = sub->add_flag(
         "--MPD",
-        options->calculate_MPD.value(),
+        opt->calculate_MPD,
         "Calculate the Mean Pairwise Distance (MPD) diversity metric."
-    );
-    options->calculate_MPD.option()->group( "Metrics" );
+    )->group( "Metrics" );
 
     // Output
     opt->file_output.add_default_output_opts_to_app( sub );
